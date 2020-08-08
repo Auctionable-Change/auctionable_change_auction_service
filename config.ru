@@ -1,2 +1,2 @@
-require '.lib/auction_service'
+require './lib/auction_service'
 run AuctionService
