@@ -1,16 +1,15 @@
 require 'sidekiq'
 require 'sidekiq-scheduler'
-require 'faraday'
-require 'dotenv'
-Dotenv.load('var.env')
+# require 'dotenv'
+require './connection'
+# Dotenv.load('var.env')
 
 
 class AuctionWorker
   include Sidekiq::Worker
+  include FaradayConnection
 
   def perform
-    url = 'http://127.0.0.0:5000/items/winners'
-    response = Faraday.post(url)
-    puts response.body
+    make_post
   end
 end
