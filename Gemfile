@@ -5,10 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'sinatra'
 gem 'faraday'
-gem 'simplecov'
-gem 'rack'
 gem 'dotenv'
-gem 'activerecord'
-gem 'sinatra-activerecord'
+gem 'redis'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'

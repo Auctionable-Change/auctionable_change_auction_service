@@ -1,0 +1,4 @@
+:schedule:
+  identify_winners:
+    cron: '0 * * * * *'
+    class: AuctionWorker
